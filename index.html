@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays Kata</title>
+</head>
+
+<body>
+    <script>
+        const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qarth,Meereen";
+        const lotrCitiesArray = ["Mordor", "Gondor", "Rohan", "Beleriand", "Mirkwood", "Dead Marshes", "Rhun", "Harad"];
+        const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit"
+
+        //Kata 1
+        var kata1 = gotCitiesCSV.split(',');
+        var kata1Element = document.createElement("p");
+        kata1Element.textContent = JSON.stringify(kata1);
+        document.body.appendChild(kata1Element);
+
+        //Kata 2
+        var kata2 = bestThing.split(" ");
+        var kata2Element = document.createElement("p");
+        kata2Element.textContent = JSON.stringify(kata2);
+        document.body.appendChild(kata2Element);
+
+        //Kata 3
+        var kata3 = kata1.join(";");
+        var kata3Element = document.createElement("p");
+        kata3Element.textContent = JSON.stringify(kata3);
+        document.body.appendChild(kata3Element);
+
+        //Kata 4
+
+        var kata4 = lotrCitiesArray.join(", ");
+        var kata4Element = document.createElement("p");
+        kata4Element.textContent = JSON.stringify(kata4);
+        document.body.appendChild(kata4Element);
+
+        //Kata 5
+        var kata5 = [];
+        for (var i = 3; i < 8; i++) {
+            var arrayItem = lotrCitiesArray[i];
+            kata5.push(arrayItem);
+        }
+        var kata5Element = document.createElement("p");
+        kata5Element.textContent = JSON.stringify(kata5);
+        document.body.appendChild(kata5Element);
+
+        //Kata 6
+        var kata6 = lotrCitiesArray;
+        kata6.splice(2, 1);
+        var kata6Element = document.createElement("p");
+        kata6Element.textContent = JSON.stringify(kata6);
+        document.body.appendChild(kata6Element);
+
+        //Kata 7
+        var kata7 = bestThing.slice(23, 38);
+        var kata7Element = document.createElement("p");
+        kata7Element.textContent = JSON.stringify(kata7);
+        document.body.appendChild(kata7Element);
+
+        //Kata 8
+        var kata8 = bestThing.indexOf("only");
+        var kata8Element = document.createElement("p");
+        kata8Element.textContent = JSON.stringify(kata8);
+        document.body.appendChild(kata8Element);
+
+        //Kata 9
+        var kata9array = gotCitiesCSV.split(',');
+        var kata9 = [];
+        for (var i = 0; i < 7; i++) {
+            var kata9temp = kata9array[i];
+            console.log(kata9temp);
+            if (kata9temp.includes("aa") || kata9temp.includes("ee") || kata9temp.includes("ii") || kata9temp.includes(
+                    "oo") || kata9temp.includes("uu")) {
+                kata9.push(kata9temp);
+            }
+        }
+        var kata9Element = document.createElement("p");
+        kata9Element.textContent = JSON.stringify(kata9);
+        document.body.appendChild(kata9Element);
+
+        //Kata 10
+        var kata10 = lotrCitiesArray;
+        kata10.sort(function(a,b){
+            return a.length-b.length;
+        }
+        );
+        var kata10Element = document.createElement("p");
+        kata10Element.textContent = JSON.stringify(kata10);
+        document.body.appendChild(kata10Element);
+    </script>
+</body>
+
+</html>
